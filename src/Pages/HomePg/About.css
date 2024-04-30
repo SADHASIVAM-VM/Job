@@ -1,0 +1,15 @@
+section{
+    background:url('../../assets//images/abbg.jpg') no-repeat fixed ;
+    background-size: cover;
+    color:white;
+ 
+}
+section ul li strong{
+    color: tomato;
+    font-size: large;
+}
+section ul li{
+  list-style:none;
+  line-height: 25px;
+  margin-bottom: 10px;
+}
