@@ -1,18 +1,19 @@
 const express = require('express')
 const app = express()
 const jsData = require('../db.json')
+const cors = require('cors') 
 const Port = process.env.PORT || 3000
 
-app.use((req, res, next) => {
-    const allowedOrigins = ['http://localhost:5174',"https://splendorous-choux-bc8ab0.netlify.app"]; 
-    const origin = req.headers.origin;
-    if (allowedOrigins.includes(origin)) {
-        res.setHeader('Access-Control-Allow-Origin', origin);
+const allowedOrigins = ['http://localhost:5174',"https://splendorous-choux-bc8ab0.netlify.app"]; 
+app.use(cors({
+    origin:function (origin, callback){
+        if(!origin || allowedOrigins.includes(origin)){
+            callback(null, true);
+        }else{
+            callback(new Error("Not Allowed By Cors"))
+        }
     }
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); 
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    next();
-});
+}));
 app.get('/Jobs',(req,res)=>{
     res.json(jsData)
 })
