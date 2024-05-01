@@ -4,7 +4,7 @@ const JsData =require('../db.json')
 
 const app = express();
 
-const allowedOrigins = ['https://splendorous-choux-bc8ab0.netlify.app','https://splendorous-choux-bc8ab0.netlify.app/'];
+const allowedOrigins = ['https://splendorous-choux-bc8ab0.netlify.app','https://splendorous-choux-bc8ab0.netlify.app/','splendorous-choux-bc8ab0.netlify.app/:1'];
 app.use(cors({
   origin: function (origin, callback) {
     // Check if the origin is allowed or is undefined (for server-to-server requests)
