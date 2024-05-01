@@ -4,7 +4,7 @@ const jsData = require('../db.json')
 const Port = process.env.PORT || 3000
 
 app.use((req, res, next) => {
-    const allowedOrigins = ['http://localhost:5174']; 
+    const allowedOrigins = ['http://localhost:5174',"https://splendorous-choux-bc8ab0.netlify.app"]; 
     const origin = req.headers.origin;
     if (allowedOrigins === origin) {
         res.setHeader('Access-Control-Allow-Origin', origin);
