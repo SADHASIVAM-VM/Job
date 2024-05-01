@@ -18,7 +18,7 @@ app.use(cors({
 
 
 app.get('/Jobs', (req, res) => {
-   res.send()
+   res.send(JsData)
 });
 
 // Start the server
