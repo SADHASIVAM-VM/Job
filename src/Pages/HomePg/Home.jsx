@@ -14,6 +14,7 @@ const Home = () => {
            Your Dream Job in Japan
            </h1>
            <p className='mt-2 text-sm md:text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, necessitatibus.</p>
+           <p className='mt-2 text-sm md:text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, necessitatibus.</p>
            
         </div>
         <div className="md:w-1/2 md:order-2 flex justify-center mb-10 ">
