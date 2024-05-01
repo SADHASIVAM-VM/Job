@@ -1,0 +1,6 @@
+.active{
+    border-bottom: 2px solid rgb(237, 113, 246);
+    padding:0px 5px;
+    transition: .3s;
+    
+}

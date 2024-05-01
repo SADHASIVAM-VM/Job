@@ -1,15 +1,19 @@
 section{
-    background:url('../../assets//images/abbg.jpg') no-repeat fixed ;
-    background-size: cover;
+    /* background:url('../../assets//images/abbg.jpg') no-repeat fixed ;
+    background-size: cover; */
+    background: #000;
     color:white;
  
 }
 section ul li strong{
-    color: tomato;
+    color: yellow;
     font-size: large;
+    margin-bottom: 10px;
+    display: block;
 }
 section ul li{
   list-style:none;
   line-height: 25px;
   margin-bottom: 10px;
+  /* opacity: 0.8; */
 }

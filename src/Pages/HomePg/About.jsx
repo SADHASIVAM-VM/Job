@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css'
+import SliderScroll from '../../Components/SliderS/Slider';
 
 const About = () => {
   return (
@@ -38,6 +39,7 @@ const About = () => {
         <li><strong>Video Games:</strong> Japan is a powerhouse in the video game industry, with companies like Nintendo, Sony, and Capcom leading the way. From classic franchises like Super Mario and Final Fantasy to innovative indie games, Japanese games are beloved by gamers around the world.</li>
       </ul>
     </div>
+    <SliderScroll/>
    </section>
   );
 }

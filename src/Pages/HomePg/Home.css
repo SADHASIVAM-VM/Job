@@ -1,0 +1,6 @@
+.textbg{
+    background-image: linear-gradient(to right, #ec77ab 0%, #7873f5 100%);
+    background-clip: text;
+    color: transparent;
+    
+}

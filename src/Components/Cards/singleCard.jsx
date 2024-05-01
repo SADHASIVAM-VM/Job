@@ -2,28 +2,31 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "./Card";
 import TextField from "@mui/material/TextField";
-import { FaFilter, FaSort } from "react-icons/fa";
+import { FaFilter } from "react-icons/fa";
 import { PropagateLoader } from "react-spinners";
 
 const SingleCard = () => {
   const [singleCards, setSingleCards] = useState([]);
   const [selecteds, setSelected] = useState("All");
   const [searches, setSearches] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/Jobs/");
-        setSingleCards(response.data);
+        const response = await axios.get("http://localhost:3000/Jobs");
+        setSingleCards(response.data.Jobs);
+        setIsLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
+        setIsLoading(false);
       }
     };
     fetchData();
   }, []);
 
   return (
-    <div className="my-2">
+    <div className="my-2" id="job">
       <div className="topic flex justify-between mx-10 mb-10 sticky top-0">
         <h1 className="text-2xl font-bold ">
           <TextField
@@ -40,7 +43,7 @@ const SingleCard = () => {
           <select
             name=""
             id=""
-            className="border-0 focus:outline-none bg-transparent"
+            className="border-0 focus:outline-none bg-transparent "
             onChange={(e) => setSelected(e.target.value)}
           >
             <option value="All">All</option>
@@ -50,14 +53,10 @@ const SingleCard = () => {
         </div>
       </div>
       <div className="flex flex-wrap mx-20 gap-5 my-5 justify-center">
-        {singleCards.length === 0 ? (
-          <p className="text-center"><PropagateLoader color="#36d7b7" /></p>
-        ) : singleCards.filter(
-            (itm) =>
-              (selecteds === "All" || itm.type === selecteds) &&
-              itm.title.toLowerCase().includes(searches.toLowerCase())
-          ).length === 0 ? (
-          <p>No jobs found.</p>
+        {isLoading ? (
+          <p className="text-center">
+            <PropagateLoader color="#36d7b7" />
+          </p>
         ) : (
           singleCards
             .filter(
