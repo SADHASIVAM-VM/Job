@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../../assets/images/logo.png'
+import logo from '../../assets/images/logo.png';
 import boom from '../../assets/images/boom.png'
 import './Navbar.css'
 import { useNavigate } from 'react-router-dom'
@@ -23,12 +23,12 @@ const Navbar = () => {
                   setActive('job') 
                   navi('/')
               }}><a href='#job'>Job</a> </li>
-                <li className={isActive === 'wishlist'?'active':''} onClick={()=> setActive('wishlist')}><Link to={'/wishlist'}> <img src={boom} alt="" className='w-8'/> </Link></li>
+                <li className={isActive === 'wishlist'?'active':''} onClick={()=> setActive('wishlist')}><Link to={'/wishlist'}><img src={boom} className='w-5'/></Link></li>
             </ul>
            
         </div>
         <div className="lang ">
-                <img src="https://w7.pngwing.com/pngs/698/799/png-transparent-translation-japanese-language-interpretation-mandarin-chinese-language-angle-english-text.png" className="h-10 rounded-lg shadow-md" alt="" />
+                <img src="https://w7.pngwing.com/pngs/698/799/png-transparent-translation-japanese-language-interpretation-mandarin-chinese-language-angle-english-text.png" className="h-8 rounded-lg shadow-md" alt="" />
             </div>
         
        </div>

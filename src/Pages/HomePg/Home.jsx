@@ -1,12 +1,12 @@
 import React from 'react'
-import bg from '../../assets/images/bg1.png'
+import bg1 from '../../assets/images/bg1.jpg'
 import './Home.css'
-
+import { motion } from 'framer-motion'
 
 const Home = () => {
 
   return (
-    <div className="bg">
+    <div className="bg home">
       <div className='mx-5 md:mx-10 my-5'>
       <div className="container flex flex-col md:flex-row items-center ">
         <div className="md:w-1/2 order-2 ">
@@ -18,7 +18,9 @@ const Home = () => {
            
         </div>
         <div className="md:w-1/2 md:order-2 flex justify-center mb-10 ">
-            <img src={bg} alt=""  className='w-[500px] md:w-[600px]'/>
+            <motion.img src={bg1} alt=""  className='w-[500px] md:w-[600px] ani_blink' />
+           
+
         </div>
       </div>
       

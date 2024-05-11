@@ -1,10 +1,10 @@
 import React from 'react';
 import './About.css'
 import SliderScroll from '../../Components/SliderS/Slider';
-
+import { motion } from 'framer-motion';
 const About = () => {
   return (
-   <section className="About relative">
+   <section className="About relative ">
 
      <div className="container mx-auto px-4 py-8 z-0">
       <h2 className="text-3xl font-bold mb-4 text-green-400">Traditional Lifestyle:</h2>
@@ -39,7 +39,9 @@ const About = () => {
         <li><strong>Video Games:</strong> Japan is a powerhouse in the video game industry, with companies like Nintendo, Sony, and Capcom leading the way. From classic franchises like Super Mario and Final Fantasy to innovative indie games, Japanese games are beloved by gamers around the world.</li>
       </ul>
     </div>
+    <motion.div className="" initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{ delay:.3, duration:.4}}>
     <SliderScroll/>
+    </motion.div>
    </section>
   );
 }

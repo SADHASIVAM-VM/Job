@@ -17,6 +17,7 @@ const SingleCard = () => {
         const response = await axios.get("http://localhost:5000/Jobs");
         setSingleCards(response.data.Jobs);
         setIsLoading(false);
+
       } catch (error) {
         console.error("Error fetching data:", error);
         setIsLoading(false);
@@ -52,7 +53,7 @@ const SingleCard = () => {
           </select>
         </div>
       </div>
-      <div className="flex flex-wrap mx-20 gap-5 my-5 justify-center">
+      <div className="flex flex-wrap mx-20 gap-5 my-5 justify-center transition ">
         {isLoading ? (
           <p className="text-center">
             <PropagateLoader color="#36d7b7" />

@@ -1,8 +1,9 @@
 import React, { useContext, useState } from "react";
-import info from "../../assets/images/info.png";
+import info from "../../assets/images/job-logo.svg";
 import "./Card.css";
 import { FaStar } from "react-icons/fa";
 import { MyContext } from "../../Contexts/Context";
+import { motion } from "framer-motion";
 
 const Card = (props) => {
   const {
@@ -50,7 +51,7 @@ const Card = (props) => {
   const [started, setStared] = useState(false);
 
   return (
-    <div className="">
+    <motion.div className="" initial={{opacity:0, scale:0.5}} whileInView={{opacity:1, scale:1}}>
       <div className="container bg-white w-[300px] shadow-lg border  rounded-lg">
         <div className={`${color} rounded-lg m-1 p-2 min-h-[200px]`}>
           <div className="flex justify-between items-center">
@@ -95,7 +96,7 @@ const Card = (props) => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
