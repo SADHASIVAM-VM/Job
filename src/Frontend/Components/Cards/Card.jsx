@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import info from "../../assets/images/job-logo.svg";
+import info from "../../../assets/images/job-logo.svg";
 import "./Card.css";
 import { FaStar } from "react-icons/fa";
 import { MyContext } from "../../Contexts/Context";

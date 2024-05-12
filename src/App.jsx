@@ -1,10 +1,10 @@
 import React from 'react'
 import './App.css'
-import Navbar from './Components/Navbars/Navbar'
+import Navbar from './Frontend/Components/Navbars/Navbar'
 import { Routes,Route } from 'react-router-dom'
-import Hero from './Pages/HomePg/Hero'
-import Wishlist from './Pages/Wishlist'
-import About from './Pages/HomePg/About'
+import Hero from './Frontend/HomePg/Hero'
+import Wishlist from './Frontend/Pages/Wishlist'
+import About from './Frontend/HomePg/About'
 const App = () => {
   return (
     <div>

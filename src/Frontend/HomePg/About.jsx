@@ -1,10 +1,10 @@
 import React from 'react';
 import './About.css'
-import SliderScroll from '../../Components/SliderS/Slider';
+import SliderScroll from '../../Frontend/Components/SliderS/Slider';
 import { motion } from 'framer-motion';
 const About = () => {
   return (
-   <section className="About relative ">
+   <section className="About relative mt-14">
 
      <div className="container mx-auto px-4 py-8 z-0">
       <h2 className="text-3xl font-bold mb-4 text-green-400">Traditional Lifestyle:</h2>

@@ -13,8 +13,10 @@ const Home = () => {
            <h1 className='text-2xl  md:text-4xl xl:text-6xl font-bold textbg'>Find & Apply For <br />
            Your Dream Job in Japan
            </h1>
-           <p className='mt-2 text-sm md:text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, necessitatibus.</p>
-           <p className='mt-2 text-sm md:text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, necessitatibus.</p>
+           <p className='my-5 text-sm md:text-lg font-medium'>
+           Japan offers diverse job opportunities ranging from traditional sectors like manufacturing and finance to emerging fields like technology and renewable energy. With a strong emphasis on innovation and efficiency, Japan's workforce thrives in a dynamic environment. Multinational corporations and local businesses provide avenues for career growth and cultural immersion in this vibrant nation.
+           </p>
+           
            
         </div>
         <div className="md:w-1/2 md:order-2 flex justify-center mb-10 ">

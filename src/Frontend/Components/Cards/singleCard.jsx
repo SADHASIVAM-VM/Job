@@ -27,8 +27,8 @@ const SingleCard = () => {
   }, []);
 
   return (
-    <div className="my-2" id="job">
-      <div className="topic flex justify-between mx-10 mb-10 sticky top-0">
+    <div className="my-2" id="jobs">
+      <div className="topic flex justify-between mx-10 mb-10 ">
         <h1 className="text-2xl font-bold ">
           <TextField
             id="search"
