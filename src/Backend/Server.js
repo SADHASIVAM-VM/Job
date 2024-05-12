@@ -3,7 +3,7 @@ const cors = require('cors');
 const JsData = require('./db.json');
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = "https://splendorous-choux-bc8ab0.netlify.app" || 5000;
 const allowedOrigins = ["http://localhost:5173","https://splendorous-choux-bc8ab0.netlify.app"];
 app.use(cors({
   origin: function (origin, callback) {
