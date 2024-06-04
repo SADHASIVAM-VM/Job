@@ -14,7 +14,7 @@ const SingleCard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/jobs");
+        const response = await axios.get("https://backenddt.onrender.com/jobs");
         setSingleCards(response.data.db);
         setIsLoading(false);
 
