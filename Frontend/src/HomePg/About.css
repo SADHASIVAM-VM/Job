@@ -1,0 +1,27 @@
+section {
+  position: relative;
+}
+section::before {
+  content: "";
+  background: url("../assets//images/aboutBg.svg") no-repeat fixed center;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+section ul li strong {
+  color: rgb(0, 110, 255);
+  font-size: large;
+  margin-bottom: 10px;
+  display: block;
+}
+section ul li {
+  list-style: none;
+  line-height: 25px;
+  margin-bottom: 10px;
+  /* opacity: 0.8; */
+}
